@@ -1,5 +1,4 @@
 --Grow tree function
-
 local function grow_sapling(pos)
 	if not default.can_grow(pos) then
 		minetest.get_node_timer(pos):start(300)
@@ -19,7 +18,6 @@ local function grow_sapling(pos)
 end
 
 --Register nodes
-
 for _,ore in pairs(ores) do
 	--Ore log
 	minetest.register_node("ore_crops:"..ore.name.."_tree", {
@@ -48,7 +46,7 @@ for _,ore in pairs(ores) do
 		description = ore.desc.." Tree Leaves",
 		drawtype = "allfaces_optional",
 		waving = 1,
-		tiles = {"default_leaves.png^default_mineral_"..ore.name..".png"},
+		tiles = {"default_leaves.png^ore_crops_"..ore.name.."_leaves_overlay.png"},
 		paramtype = "light",
 		is_ground_content = false,
 		groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
@@ -92,7 +90,7 @@ for _,ore in pairs(ores) do
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(600, 1200))
+			minetest.get_node_timer(pos):start(math.random(ore.time_min, ore.mine_max))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)

@@ -25,7 +25,6 @@ for _,ore in pairs(ores) do
 		end
 
 		minetest.override_item("ore_crops:"..ore.name.."_crop_"..i, {
-			tiles = {"ore_crops_"..ore.name.."_crop_"..i..".png"},
 			drop = {
 				items = {
 					{items = {"default:"..ore.item}, rarity = base_rarity},
@@ -36,4 +35,20 @@ for _,ore in pairs(ores) do
 			}
 		})
 	end
+
+	--Ore seed craft recipe
+	minetest.register_craft({
+		output = "ore_crops:seed_"..ore.name.."_crop 4",
+		recipe = {
+			{"default:"..ore.item},
+		}
+	})
+
+	minetest.register_craft({
+		output = "default:"..ore.item,
+		recipe = {
+			{"ore_crops:seed_"..ore.name.."_crop ","ore_crops:seed_"..ore.name.."_crop "},
+			{"ore_crops:seed_"..ore.name.."_crop ","ore_crops:seed_"..ore.name.."_crop "}
+		}
+	})
 end

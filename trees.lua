@@ -25,7 +25,7 @@ for _,ore in pairs(ores) do
 		tiles = {"default_tree_top.png^default_mineral_"..ore.name..".png", "default_tree_top.png^default_mineral_"..ore.name..".png", "default_tree.png^default_mineral_"..ore.name..".png"},
 		paramtype2 = "facedir",
 		is_ground_content = false,
-		groups = {tree = 1, cracky = 3, flammable = 2},
+		groups = {tree = 1, choppy = 2, flammable = 2},
 		drop = {
 			max_items = 2,
 			items = {
@@ -90,7 +90,7 @@ for _,ore in pairs(ores) do
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(ore.time_min, ore.mine_max))
+			minetest.get_node_timer(pos):start(math.random(ore.time_min, ore.time_max))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)

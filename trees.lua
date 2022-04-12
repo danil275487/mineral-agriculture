@@ -6,13 +6,13 @@ local function grow_sapling(pos)
 	end
 	local node = minetest.get_node(pos)
 	for _,ore in pairs(ores) do
-		if node.name == "ore_crops:"..ore.name.."_sapling" then
+		if node.name == "mineral_agriculture:"..ore.name.."_sapling" then
 			minetest.log("action", "A "..ore.name.." sapling grows into a tree at "..
 				minetest.pos_to_string(pos))
 			minetest.remove_node(pos)
 			pos.x = pos.x - 3
 			pos.z = pos.z - 3
-			minetest.place_schematic(pos, minetest.get_modpath("ore_crops").."/schems/"..ore.name.."_tree.mts", "random", nil, true)
+			minetest.place_schematic(pos, minetest.get_modpath("mineral_agriculture").."/schems/"..ore.name.."_tree.mts", "random", nil, true)
 		end
 	end
 end
@@ -20,7 +20,7 @@ end
 --Register nodes
 for _,ore in pairs(ores) do
 	--Ore log
-	minetest.register_node("ore_crops:"..ore.name.."_tree", {
+	minetest.register_node("mineral_agriculture:"..ore.name.."_tree", {
 		description = ore.desc.." Tree",
 		tiles = {"default_tree_top.png^default_mineral_"..ore.name..".png", "default_tree_top.png^default_mineral_"..ore.name..".png", "default_tree.png^default_mineral_"..ore.name..".png"},
 		paramtype2 = "facedir",
@@ -42,11 +42,11 @@ for _,ore in pairs(ores) do
 	})
 
 	--Ore leaves
-	minetest.register_node("ore_crops:"..ore.name.."_leaves", {
+	minetest.register_node("mineral_agriculture:"..ore.name.."_leaves", {
 		description = ore.desc.." Tree Leaves",
 		drawtype = "allfaces_optional",
 		waving = 1,
-		tiles = {"default_leaves.png^ore_crops_"..ore.name.."_leaves_overlay.png"},
+		tiles = {"default_leaves.png^mineral_agriculture_"..ore.name.."_leaves_overlay.png"},
 		paramtype = "light",
 		is_ground_content = false,
 		groups = {snappy = 3, leafdecay = 3, flammable = 2, leaves = 1},
@@ -54,7 +54,7 @@ for _,ore in pairs(ores) do
 			max_items = 2,
 			items = {
 				{
-					items = {"ore_crops:"..ore.name.."_sapling"},
+					items = {"mineral_agriculture:"..ore.name.."_sapling"},
 					rarity = 20,
 				},
 				{
@@ -72,12 +72,12 @@ for _,ore in pairs(ores) do
 	})
 
 	--Ore sapling
-	minetest.register_node("ore_crops:"..ore.name.."_sapling", {
+	minetest.register_node("mineral_agriculture:"..ore.name.."_sapling", {
 		description = ore.desc.." Tree Sapling",
 		drawtype = "plantlike",
-		tiles = {"ore_crops_"..ore.name.."_sapling.png"},
-		inventory_image = "ore_crops_"..ore.name.."_sapling.png",
-		wield_image = "ore_crops_"..ore.name.."_sapling.png",
+		tiles = {"mineral_agriculture_"..ore.name.."_sapling.png"},
+		inventory_image = "mineral_agriculture_"..ore.name.."_sapling.png",
+		wield_image = "mineral_agriculture_"..ore.name.."_sapling.png",
 		paramtype = "light",
 		sunlight_propagates = true,
 		walkable = false,
@@ -95,7 +95,7 @@ for _,ore in pairs(ores) do
 
 		on_place = function(itemstack, placer, pointed_thing)
 			itemstack = default.sapling_on_place(itemstack, placer, pointed_thing,
-				"ore_crops:"..ore.name.."_sapling",
+				"mineral_agriculture:"..ore.name.."_sapling",
 				{x = -3, y = 1, z = -3},
 				{x = 3, y = 6, z = 3},
 				4)
@@ -106,7 +106,7 @@ for _,ore in pairs(ores) do
 
 	--Ore sapling craft recipe
 	minetest.register_craft({
-		output = "ore_crops:"..ore.name.."_sapling",
+		output = "mineral_agriculture:"..ore.name.."_sapling",
 		recipe = {
 			{"default:"..ore.item, "default:"..ore.item, "default:"..ore.item},
 			{"default:"..ore.item, "default:sapling", "default:"..ore.item},

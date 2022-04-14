@@ -18,7 +18,7 @@ Once you have obtained a ore tree sapling or ore seeds, you can plant them like 
 
 
 ## TO-DO
-- [ ] Add support for Bonemeal mod
+- [x] Add support for Bonemeal mod
 - [ ] Add support for More Ores
 - [ ] Add ore bushes and ore bush saplings
 - [ ] Add more ore tree types

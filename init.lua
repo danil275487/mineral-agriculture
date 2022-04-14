@@ -1,4 +1,6 @@
 mineral_agriculture = {}
+
+--Various ores
 ores = {
 	{
 		name = "coal",
@@ -51,6 +53,6 @@ ores = {
 	},
 }
 
-
 dofile(minetest.get_modpath("mineral_agriculture").."/trees.lua")
 dofile(minetest.get_modpath("mineral_agriculture").."/crops.lua")
+dofile(minetest.get_modpath("mineral_agriculture").."/mod_support.lua")

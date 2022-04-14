@@ -1,3 +1,10 @@
+--Tree spawning function
+for _,ore in pairs(ores) do
+	mineral_agriculture["grow_new_"..ore.name.."_ore_tree"] = function(pos)
+		minetest.place_schematic({x = pos.x - 3, y = pos.y - 1, z = pos.z - 3},minetest.get_modpath("mineral_agriculture").."/schems/"..ore.name.."_tree.mts", "random", nil, false)
+	end
+end
+
 --Grow tree function
 local function grow_sapling(pos)
 	if not default.can_grow(pos) then
@@ -7,12 +14,9 @@ local function grow_sapling(pos)
 	local node = minetest.get_node(pos)
 	for _,ore in pairs(ores) do
 		if node.name == "mineral_agriculture:"..ore.name.."_sapling" then
-			minetest.log("action", "A "..ore.name.." sapling grows into a tree at "..
-				minetest.pos_to_string(pos))
+			minetest.log("action", "A "..ore.name.." sapling grows into a tree at "..minetest.pos_to_string(pos))
 			minetest.remove_node(pos)
-			pos.x = pos.x - 3
-			pos.z = pos.z - 3
-			minetest.place_schematic(pos, minetest.get_modpath("mineral_agriculture").."/schems/"..ore.name.."_tree.mts", "random", nil, true)
+			mineral_agriculture["grow_new_"..ore.name.."_ore_tree"](pos)
 		end
 	end
 end

@@ -94,7 +94,7 @@ for _,ore in pairs(ores) do
 		sounds = default.node_sound_leaves_defaults(),
 
 		on_construct = function(pos)
-			minetest.get_node_timer(pos):start(math.random(ore.time_min, ore.time_max))
+			minetest.get_node_timer(pos):start(math.random(600, 1200))
 		end,
 
 		on_place = function(itemstack, placer, pointed_thing)

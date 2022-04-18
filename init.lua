@@ -39,6 +39,11 @@ ores = {
 	},
 }
 
+if minetest.get_modpath("moreores") then
+	table.insert(ores, {name = "silver", desc = "Silver", item = "mithril_lump"})
+	table.insert(ores, {name = "mithril", desc = "Mithril", item = "mithril_lump"})
+end
+
 dofile(minetest.get_modpath("mineral_agriculture").."/trees.lua")
 dofile(minetest.get_modpath("mineral_agriculture").."/crops.lua")
 dofile(minetest.get_modpath("mineral_agriculture").."/mod_support.lua")

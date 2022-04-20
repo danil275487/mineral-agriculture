@@ -19,7 +19,7 @@ Once you have obtained a ore tree sapling or ore seeds, you can plant them like 
 
 ## TO-DO
 - [x] Add support for [Bonemeal](https://notabug.org/tenplus1/bonemeal) mod
-- [ ] Add support for [More Ores](https://github.com/minetest-mods/moreores) mod
+- [x] Add support for [More Ores](https://github.com/minetest-mods/moreores) mod
 - [ ] Add support for [Technic](https://github.com/minetest-mods/technic) mod
 - [ ] Add support for [Gemstones](https://github.com/KodaTheGuy/Gemstones) mod
 - [ ] Add ore bushes and ore bush saplings

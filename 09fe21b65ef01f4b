@@ -1,0 +1,102 @@
+[33mcommit 09fe21b65ef01f4b6e69a4cd1d4a3adfc42a129a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: danil275487 <danilsirin24@gmail.com>
+Date:   Mon Apr 18 21:44:07 2022 +0300
+
+    Add support for More Ores mod
+
+[33mcommit 9d8cb028310914ef445236f8e787013adb5072b8[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: danil275487 <danilsirin24@gmail.com>
+Date:   Fri Apr 15 22:01:30 2022 +0300
+
+    Make better sapling textures
+
+[33mcommit 7f88200c0d234dfbe8d93695c800674227c780ef[m
+Author: danil275487 <danilsirin24@gmail.com>
+Date:   Fri Apr 15 18:18:26 2022 +0300
+
+    Implement bonemeal support properly this time
+
+[33mcommit 8756e1958fb398d2afce9e85221aeb7f4ba10c8d[m
+Author: danil275487 <danilsirin24@gmail.com>
+Date:   Fri Apr 15 07:58:18 2022 +0300
+
+    Update README.md
+
+[33mcommit 4eabc85cb519602fb0e393782670e3568a786101[m
+Author: danil275487 <danilsirin24@gmail.com>
+Date:   Fri Apr 15 07:56:51 2022 +0300
+
+    Remove increased tree grow time based on the tree type
+
+[33mcommit 54618dc3b15a0e72904bd33d10dfdde50b549cdd[m
+Author: Danil_2461 <78205681+danil275487@users.noreply.github.com>
+Date:   Fri Apr 15 07:55:22 2022 +0300
+
+    Update README.md
+
+[33mcommit e22659f7db9f19687359b11e1094f285840a457c[m
+Author: Danil_2461 <78205681+danil275487@users.noreply.github.com>
+Date:   Thu Apr 14 09:32:23 2022 +0300
+
+    Update README.md
+
+[33mcommit 695226b86c8c663b5ca296582d75b898adac2204[m
+Author: Danil_2461 <78205681+danil275487@users.noreply.github.com>
+Date:   Thu Apr 14 08:35:16 2022 +0300
+
+    Update README.md
+
+[33mcommit 435ad1bc33e7a3d786c1036538eed60a3fcece06[m
+Merge: 2254dd2 286156f
+Author: danil275487 <danilsirin24@gmail.com>
+Date:   Thu Apr 14 08:34:32 2022 +0300
+
+    Merge branch 'main' of https://github.com/danil275487/mineral-agriculture
+
+[33mcommit 2254dd2aa4a4fd8e85dfbfc740681ab362a9297a[m
+Author: danil275487 <danilsirin24@gmail.com>
+Date:   Thu Apr 14 08:33:36 2022 +0300
+
+    Drastic code changes, itemstring refactoring and bonemeal mod support
+
+[33mcommit 286156f0f832b9cc43eab1bda19245ec618cd59e[m
+Author: Danil_2461 <78205681+danil275487@users.noreply.github.com>
+Date:   Tue Apr 12 20:05:35 2022 +0300
+
+    Update README.md
+
+[33mcommit 5e7cbb148b44e4573e17298e5b67eba87acb642e[m
+Author: Danil_2461 <78205681+danil275487@users.noreply.github.com>
+Date:   Tue Apr 12 15:45:30 2022 +0300
+
+    Create README.md
+
+[33mcommit 1a0906d224af041f7534a36dddc7de3dfb73a0db[m
+Author: danil275487 <danilsirin24@gmail.com>
+Date:   Tue Apr 12 14:46:43 2022 +0300
+
+    Rebrand to mineral agriculture
+
+[33mcommit 4452bbf272e913972a77fc30557765f7cc6365cc[m
+Author: danil275487 <danilsirin24@gmail.com>
+Date:   Tue Apr 12 12:59:01 2022 +0300
+
+    Add crafting recipe for seeds
+
+[33mcommit e02f194f3216347a0331938889df3518a974d114[m
+Author: danil275487 <danilsirin24@gmail.com>
+Date:   Tue Apr 12 12:11:33 2022 +0300
+
+    Add plants, seeds and new textures
+
+[33mcommit 1f6d05825feeddd50264a8f13e4f878b3e33b199[m
+Author: danil275487 <danilsirin24@gmail.com>
+Date:   Sun Apr 10 22:49:07 2022 +0300
+
+    Add trees
+
+[33mcommit ab83d9ffb1820daa104cc40371ef32ca1550a3f8[m
+Author: Danil_2461 <78205681+danil275487@users.noreply.github.com>
+Date:   Sun Apr 10 20:20:24 2022 +0300
+
+    Initial commit

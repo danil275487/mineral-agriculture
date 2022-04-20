@@ -126,8 +126,7 @@ if minetest.get_modpath("moreores") then
 		end
 
 		minetest.override_item("mineral_agriculture:mithrilcrop_"..i, {
-			tiles = {"mineral_agriculture_mithril_plant_"..i..".png"},
-			drop = {
+		drop = {
 				items = {
 					{items = {"moreores:mithril_lump"}, rarity = base_rarity},
 					{items = {"moreores:mithril_lump"}, rarity = base_rarity * 2},
